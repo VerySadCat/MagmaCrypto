@@ -49,7 +49,7 @@ public class Magma {
         return null;
     }
 
-    // преобразование текста из target в BitSet на основе кодов символов (ASCII)
+    // преобразованиrе текста из target в BitSet на основе кодов символов (ASCII)
     private BitSet[] stringTextToBitSet(String sourceText, int m, int n) {
         BitSet[] bits = createEmptyBitSetMas(m, n);
 
