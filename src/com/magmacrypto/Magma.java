@@ -82,13 +82,13 @@ public class Magma {
     // циклический сдвиг влево (если нулевой бит справа) 0001 -> 0010.
     // Пишет в ту же переменную
     // принимает всю правую цепочку битов (32) и смещает циклически на k символов(нам надо 11)
-    private void cycleShiftLeft(BitSet bits,int i, int k) {
+    private void cycleShiftLeft(BitSet bits,int N, int k) {
         BitSet bitsForShift = new BitSet();
-        for(int j =0; j<i-k; j++){
+        for(int j =0; j<N-k; j++){
             bitsForShift.set(j, bits.get(j+k)); // выполняем простой сдвиг, перенося биты в лево
         }
         for (int j =0; j<k; j++){
-            bitsForShift.set(j+i-k, bits.get(j)); // записываем с образовавшихся нулей потерянную часть битов
+            bitsForShift.set(j+N-k, bits.get(j)); // записываем с образовавшихся нулей потерянную часть битов
         }
          bits = bitsForShift; // переносим обратно в переменную
     }
